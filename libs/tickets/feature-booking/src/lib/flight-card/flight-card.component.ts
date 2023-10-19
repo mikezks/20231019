@@ -31,6 +31,7 @@ export class FlightCardComponent {
   @Output() selectedChange = new EventEmitter<boolean>();
 
   select() {
+    inject(NgZone);
     this.selected = true;
     this.selectedChange.emit(this.selected);
   }
